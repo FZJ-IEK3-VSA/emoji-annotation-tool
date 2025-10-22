@@ -1,0 +1,11 @@
+**.log
+**.egg-info
+**/__pycache__
+**/.vscode
+**/.ipynb_checkpoints
+build/*
+logs/*
+notes.md
+todo.md
+!*.gitkeep
+environment*.yml
