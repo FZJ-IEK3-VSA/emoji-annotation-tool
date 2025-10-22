@@ -2,6 +2,8 @@
 
 # colorful-emoji-annotations
 
+Easy to read and edit text annotations for NLP tasks. 
+
 Using colorful emojis is an easy and effective way to annotate text. Emoji annotations are easy to read and edit without requiring specialized software. Simply use your preferred text editor to curate your data.
 
 ## Why emojis?
