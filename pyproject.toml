@@ -48,6 +48,9 @@ package-dir = {"" = "src"}
 where = ["src"]
 include = ["*"]
 
+[tool.setuptools.package-data]
+colorful_emoji_annotations = ["*.txt", "*.json"]
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
