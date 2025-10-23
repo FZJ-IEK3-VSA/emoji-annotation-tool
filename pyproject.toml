@@ -49,7 +49,7 @@ where = ["src"]
 include = ["*"]
 
 [tool.setuptools.package-data]
-colorful_emoji_annotations = ["*.txt", "*.json"]
+"colorful_emoji_annotations.static_resources" = ["*.txt", "*.json"]
 
 [build-system]
 requires = ["setuptools"]
