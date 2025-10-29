@@ -1,4 +1,4 @@
-from colorful_emoji_annotations.utils.paths import STATIC_RESOURCES_DIR
+from emoji_annotations.utils.paths import STATIC_RESOURCES_DIR
 
 
 # Load emojis from a file

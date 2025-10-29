@@ -1,6 +1,6 @@
 from pathlib import Path
-from colorful_emoji_annotations import EmojiAnnotator
-from colorful_emoji_annotations.utils.emoji import is_emoji
+from emoji_annotations import EmojiAnnotator
+from emoji_annotations.utils.emoji import is_emoji
 
 
 def test_create_emoji_annotation_object(emoji_mapping):

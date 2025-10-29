@@ -5,6 +5,7 @@
 **/.ipynb_checkpoints
 build/*
 logs/*
+dist/*
 notes.md
 todo.md
 !*.gitkeep

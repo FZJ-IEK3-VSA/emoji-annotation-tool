@@ -1,0 +1,2 @@
+
+from emoji_annotations.main import EmojiAnnotator

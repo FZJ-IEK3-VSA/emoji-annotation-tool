@@ -2,9 +2,9 @@
 import re
 import json
 from collections import defaultdict, OrderedDict
-from colorful_emoji_annotations.utils.paths import STATIC_RESOURCES_DIR
-from colorful_emoji_annotations.utils.types import Annotations
-from colorful_emoji_annotations.utils.emoji import is_emoji
+from emoji_annotations.utils.paths import STATIC_RESOURCES_DIR
+from emoji_annotations.utils.types import Annotations
+from emoji_annotations.utils.emoji import is_emoji
 try:
     from wasabi import Printer
     msg = Printer()
@@ -278,7 +278,7 @@ class EmojiAnnotator:
         msg.text("Computer says 🗯️", color="grey")
         msg.text(annotated_text, spaced=True, color=text_color)
         msg.text("Correct? y/n", color=cmd_help_color)
-        msg.text("(To edit the n-th annotation, enter its number n, e.g. '3', press enter, "\
+        msg.text("(To edit the n-th annotation boundary, enter its number n, e.g. '3', press enter, "\
                  "use the arrow keys to move it, press enter to see the changes, and press enter "\
                  "again to confirm the changes. To delete all annotations press 'd'.)", color=cmd_help_color)
         left = "\x1b[D"

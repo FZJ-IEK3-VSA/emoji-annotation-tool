@@ -1,12 +1,14 @@
 <a href="https://www.fz-juelich.de/en/ice/ice-2"><img src="https://github.com/FZJ-IEK3-VSA/README_assets/blob/main/JSA-Header.svg?raw=True" alt="Forschungszentrum Juelich Logo" width="175px"></a>
 
-# colorful-emoji-annotations
+# emoji-annotations
 
-Easy to read and edit text annotations for NLP tasks. 
+Easy to read and edit text annotations for NLP tasks.
 
 Using colorful emojis is an easy and effective way to annotate text. Emoji annotations are easy to read and edit without requiring specialized software. Simply use your preferred text editor to curate your data.
 
+
 ## Why emojis?
+
 They are easy to spot, distinguish, and edit — and are fun to use! Data formats used to store annotations for sequence annotation tasks are often difficult for humans to read and are usually viewed and edited with specialized software. Using emojis makes annotations easily recognizable and editable in any text editor. Ideally, use emojis that resemble the entity type (e.g., 📆,⏰️,📍,🏛️,🎨, etc.) or that are of different colors (e.g., 🍎,🥝,🍊,🍌,🍉,🍇, etc.). 
 
 Emoji annotations are:
@@ -14,34 +16,32 @@ Emoji annotations are:
 * **Easy to read**: Colors pop out and are easy to distinguish.
 * **Easy to edit**: Edits are quick and easy because emojis are just one character to move per annotation boundary. In addition, you can use the search and replace function and other features of your favorite text editor to efficiently edit many annotations.
 
+
 ## Limitations
+
 * Works only for text genres in which the emojis selected as annotation boundaries are unlikely to appear in the text.
 * Because the same emoji is used as start and end markers, nested or overlapping annotations of the same entity type are not supported.
 
+
 ## Installation
-To install the package, use pip
+
+Create and activate a virtual environment. Then, install the package via pip:
 ```bash
-pip install git+https://github.com/FZJ-IEK3-VSA/emoji-annotation-tool.git
-```
-or clone the repository and install it manually
-```bash
-git clone 
-cd colorful-emoji-annotations
-mamba env create -f requirements.yml
-mamba activate emoji_annotations_env
-pip install -e .
+pip install emoji-annotations
 ```
 
 
 ## Supported tasks
+
 Emoji annotations are best suited for tasks that are typically approached with sequence labeling, such as named entity recognition (NER). You can also use them for relation extraction, template filling, or event extraction, provided that you use relation-specific tagging and only annotate one n-ary relation, template, or event per record.
 
 
 ## Usage
+
 Create a new emoji annotation object using whichever emoji mapping you prefer. A mapping is a dictionary that associates entity types with emojis.
 
 ```python
-from colorful_emoji_annotations import EmojiAnnotator
+from emoji_annotations import EmojiAnnotator
 emoji_mapping = {
         "artwork": "🎨",
         "painter": "👨‍🎨",
@@ -81,7 +81,7 @@ Computer says 🗯️
 🌶️Andalusia🌶️ has a 🍊surface area🍊 of 🍏87,597🍏 🍓square kilometres🍓.
 
 Correct? y/n
-(To edit the n-th annotation, enter its number n, e.g. '3', press enter, use the arrow keys to move it, press enter to see the changes, and press enter again to confirm the changes. To delete all annotations press 'd'.)
+(To edit the n-th annotation boundary, enter its number n, e.g. '3', press enter, use the arrow keys to move it, press enter to see the changes, and press enter again to confirm the changes. To delete all annotations press 'd'.)
 ```
 ```
 User input: 3 
@@ -100,6 +100,7 @@ Correct? y/n
 
 
 ## Comparison of NER annotation formats
+
 Comparing different NER annotation formats, we can see that the colorful emoji annotations are much easier to read and edit than the other formats. While this small example already makes the difference obvious, it becomes even more pronounced with larger datasets.
 
 ### _Colorful emoji annotations_
